@@ -1,0 +1,38 @@
+super + shift + w
+	firefox
+
+super + v
+	st -e vim 
+
+super + p
+	mpv $(xclip -o -selection clipboard)
+
+super + Return 
+	st
+
+super + m 
+	$HOME/.local/bin/mount.sh
+
+XF86Audio{RaiseVolume,LowerVolume,Mute}
+	$HOME/.local/bin/volume.sh {up,down,toggle}
+
+super + q 
+    $HOME/.local/bin/exit.sh
+
+super + d 
+    dolphin
+
+super + r 
+    st -e rmpc
+
+ctrl + shift + Print 
+    maim -s | xclip -selection clipboard -t image/png
+
+super + f 
+    setbg /home/marouane/Downloads/wallpapers
+
+super + o
+    rofi -show drun
+
+super + t
+    mpc toggle
