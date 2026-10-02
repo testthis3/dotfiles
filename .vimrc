@@ -46,7 +46,7 @@ syntax enable
 "set background=dark
 colorscheme tokyonight
 
-set number              " Show line numbers
+set relativenumber      " Show line numbers relative to current line
 set ruler               " Show cursor position
 set showcmd             " Show partial commands
 set cursorline          " Highlight current line
@@ -100,4 +100,12 @@ tnoremap <C-j> <C-w>j
 tnoremap <C-k> <C-w>k
 tnoremap <C-l> <C-w>l
 
-
+" c files template
+autocmd BufNewFile *.c call setline(1, [
+      \ '#include <stdio.h>',
+      \ '',
+      \ 'int main() {',
+      \ '',
+      \ '    return 0;',
+      \ '}'
+      \ ])

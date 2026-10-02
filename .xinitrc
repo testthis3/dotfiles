@@ -8,8 +8,8 @@ mpd &
 
 screentime &
 
-setxkbmap -layout us,ara -option grp:ctrl_space_toggle
+setxkbmap -layout us,ara -option 'grp:ctrl_space_toggle'
 setxkbmap -option caps:escape
 
 dwmblocks &
-exec dbus-run-session -- dwm 
+exec  dwm 
