@@ -1,0 +1,67 @@
+super + shift + w
+    chromium
+    #firefox
+
+super + v
+    st -e vim
+
+super + Return
+    st
+
+super + d
+    dolphin
+
+super + r
+    kitty rmpc
+
+super + o
+    rofi -show drun
+
+ctrl + shift + Print
+    maim -s | xclip -selection clipboard -t image/png
+
+super + f
+    setbg $HOME/Downloads/wallpapers
+
+# toggle song state for rmpc
+super + t
+    mpc toggle
+
+# scripts
+
+# run copied youtube url in mpv player
+super + p
+    mpv "$(xclip -o -selection clipboard)"
+
+# mount devices
+super + m
+    $HOME/.local/bin/mount.sh
+
+# control volume
+super + {equal,minus,BackSpace}
+    $HOME/.local/bin/volume.sh {up,down,toggle}
+
+XF86Audio{RaiseVolume,LowerVolume,Mute}
+    $HOME/.local/bin/volume.sh {up,down,toggle}
+
+# to shutdown, reboot, and exit dwm
+super + q
+    $HOME/.local/bin/exit.sh
+
+super + shift + p
+    nsxiv $HOME/Uni/resources/schedule/schedule.jpeg
+
+super + shift + y
+    kitty yazi ~/Uni/archive/S1
+
+super + l
+    st -e vim ~/Documents/list
+
+super + y
+    kitty yazi
+
+super + shift + s
+    st -e ctimer create
+
+super + s
+    st -e ctimer toggle
