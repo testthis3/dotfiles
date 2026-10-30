@@ -15,8 +15,6 @@ export PATH="$HOME/.local/bin:$HOME/bin:$PATH"
 
 export RANGER_LOAD_DEFAULT_RC=false
 
-#export LIBVIRT_DEFAULT_URI="qemu:///system"
-
 export VISUAL='vim'
 export EDITOR='vim'
 
