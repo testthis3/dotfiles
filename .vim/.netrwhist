@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =0
+let g:netrw_dirhist_0='/home/marouane/Documents'
+let g:netrw_dirhist_9='/home/marouane/data/media/anime/Serial Experiments Lain'
+let g:netrw_dirhist_8='/home/marouane/random/youtube/Linux System'
+let g:netrw_dirhist_7='/home/marouane/data/media/anime/Serial Experiments Lain/Season 1'
+let g:netrw_dirhist_6='/home/marouane/.config'
+let g:netrw_dirhist_5='/home/marouane/.config/sxhkd'
+let g:netrw_dirhist_4='/tmp'
+let g:netrw_dirhist_3='/home/marouane/scripts'
+let g:netrw_dirhist_2='/home/marouane'
+let g:netrw_dirhist_1='/var/service/cupsd/log/supervise'

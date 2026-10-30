@@ -1,0 +1,1 @@
+Colorizer-0.10.vmb: rmdir('/home/marouane/.vim/plugin')|call delete('/home/marouane/.vim/plugin/ColorizerPlugin.vim')|rmdir('/home/marouane/.vim/doc')|call delete('/home/marouane/.vim/doc/Colorizer.txt')|rmdir('/home/marouane/.vim/autoload')|call delete('/home/marouane/.vim/autoload/Colorizer.vim')
