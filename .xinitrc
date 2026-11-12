@@ -8,7 +8,7 @@ jellyfin-mpv-shim &
 screentime &
 battery-notifier.sh &
 
-setxkbmap -layout us,ara -option 'grp:ctrl_space_toggle'
+setxkbmap -layout us,ara,fr -option 'grp:ctrl_space_toggle' 
 setxkbmap -option caps:escape
 
 dwmblocks &

@@ -12,7 +12,7 @@ super + d
     dolphin
 
 super + r
-    kitty rmpc
+    st -e rmpc
 
 super + o
     rofi -show drun
@@ -52,13 +52,14 @@ super + shift + p
     nsxiv $HOME/Uni/resources/schedule/schedule.jpeg
 
 super + shift + y
-    kitty yazi ~/Uni/archive/S1
+    st -e yazi ~/Uni/archive/S1
+
+super + y
+    st -e yazi
 
 super + l
     st -e vim ~/Documents/list
 
-super + y
-    kitty yazi
 
 super + shift + s
     st -e ctimer create

@@ -13,6 +13,12 @@
 
 export PATH="$HOME/.local/bin:$HOME/bin:$PATH"
 
+export PATH="$HOME/random/llama.cpp/build/bin:$PATH" # llama.cpp commands
+export PATH="/usr/local/cuda/bin:$PATH" # nvidia compiler nvcc command
+export LD_LIBRARY_PATH="/usr/local/cuda/lib64:$LD_LIBRARY_PATH"
+
+export PATH="$HOME/.opencode/bin:$PATH" # Opencode command
+
 export RANGER_LOAD_DEFAULT_RC=false
 
 export VISUAL='vim'
@@ -92,3 +98,4 @@ mvr() {
         --remove-source-files \
         "$@"
 }
+
