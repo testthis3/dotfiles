@@ -20,8 +20,6 @@ export LD_LIBRARY_PATH="/usr/local/cuda/lib64:$LD_LIBRARY_PATH"
 export PATH="$HOME/.opencode/bin:$PATH" # Opencode command
 export PATH="$HOME/.cargo/bin:$PATH" # Rust
 
-export SSLKEYLOGFILE="$HOME/Documents/sslkeys.txt" # To decode data from wireshark
-
 export RANGER_LOAD_DEFAULT_RC=false
 export VISUAL='vim'
 export EDITOR='vim'
