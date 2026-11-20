@@ -27,38 +27,14 @@ super + f
 super + t
     mpc toggle
 
-# scripts
-
-# run copied youtube url in mpv player
-super + p
-    mpv "$(xclip -o -selection clipboard)"
-
-# mount devices
-super + m
-    $HOME/.local/bin/mount.sh
-
-# control volume
-super + {equal,minus,BackSpace}
-    $HOME/.local/bin/volume.sh {up,down,toggle}
-
-XF86Audio{RaiseVolume,LowerVolume,Mute}
-    $HOME/.local/bin/volume.sh {up,down,toggle}
-
-# to shutdown, reboot, and exit dwm
-super + q
-    $HOME/.local/bin/exit.sh
-
 super + shift + p
-    nsxiv $HOME/Uni/resources/schedule/schedule.jpeg
-
-super + shift + y
-    st -e yazi ~/Uni/archive/S1
+    nsxiv $HOME/uni/resources/schedule.jpeg
 
 super + y
-    st -e yazi
+    st -e yazi # y: alias for yazi (see ~/.bashrc)
 
-super + l
-    st -e vim ~/Documents/list
+super + shift + y
+    st -e yazi ~/uni/S1 
 
 
 super + shift + s
@@ -66,3 +42,22 @@ super + shift + s
 
 super + s
     st -e ctimer toggle
+
+
+##  Scripts (in $HOME/.local/bin)
+
+super + p
+    mpv "$(xclip -o -selection clipboard)"
+
+super + m
+    mount.sh
+
+super + {equal,minus,BackSpace}
+    volume.sh {up,down,toggle}
+
+XF86Audio{RaiseVolume,LowerVolume,Mute}
+    volume.sh {up,down,toggle}
+
+super + q
+    exit.sh
+

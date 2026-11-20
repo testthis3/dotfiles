@@ -4,7 +4,7 @@
 (
     address: "127.0.0.1:6600",
     password: None,
-    cache_dir: Some("$HOME/Music/.youtube_cache"),
+    cache_dir: Some("$HOME/data/media/Music/.youtube_cache"),
     volume_step: 5,
     max_fps: 30,
     scrolloff: 0,

@@ -13,14 +13,16 @@
 
 export PATH="$HOME/.local/bin:$HOME/bin:$PATH"
 
-export PATH="$HOME/random/llama.cpp/build/bin:$PATH" # llama.cpp commands
+export PATH="$HOME/dev/src/programs/llama.cpp/build/bin:$PATH" # llama.cpp commands
 export PATH="/usr/local/cuda/bin:$PATH" # nvidia compiler nvcc command
 export LD_LIBRARY_PATH="/usr/local/cuda/lib64:$LD_LIBRARY_PATH"
 
 export PATH="$HOME/.opencode/bin:$PATH" # Opencode command
+export PATH="$HOME/.cargo/bin:$PATH" # Rust
+
+export SSLKEYLOGFILE="$HOME/Documents/sslkeys.txt" # To decode data from wireshark
 
 export RANGER_LOAD_DEFAULT_RC=false
-
 export VISUAL='vim'
 export EDITOR='vim'
 
@@ -48,12 +50,28 @@ alias config='/usr/bin/git --git-dir=/home/marouane/.cfg/ --work-tree=/home/maro
 # yt-dlp
 # -----------------------------------------------------------------------------
 
-alias yta='yt-dlp -x --audio-format mp3 -o "%(title)s.%(ext)s" --add-metadata'
-alias ytv='yt-dlp -f "bv*+ba/b" --merge-output-format mp4 -o "%(title)s.%(ext)s"'
+# Single audio (MP3)
+alias yta='yt-dlp -x --audio-format mp3 --audio-quality 0 \
+  --embed-metadata --embed-thumbnail --convert-thumbnails jpg \
+  --parse-metadata "title:%(title)s" \
+  --parse-metadata "artist:%(channel)s" \
+  -o "%(title)s.%(ext)s"'
 
-# playlist
-alias ytpa='yt-dlp -x --audio-format mp3 --yes-playlist -o "%(playlist_title)s/%(title)s.%(ext)s" --add-metadata'
-alias ytpv='yt-dlp --yes-playlist -f "bv*+ba/b" --merge-output-format mp4 -o "%(playlist_title)s/%(playlist_index)02d - %(title)s.%(ext)s"'
+# Single video (MP4)
+alias ytv='yt-dlp -f "bv*+ba/b" --merge-output-format mp4 \
+  -o "%(title)s.%(ext)s"'
+
+# Playlist audio (MP3)
+alias ytpa='yt-dlp -x --audio-format mp3 --audio-quality 0 --yes-playlist \
+  --embed-metadata --embed-thumbnail --convert-thumbnails jpg \
+  --parse-metadata "title:%(title)s" \
+  --parse-metadata "artist:%(channel)s" \
+  -o "%(playlist_title)s/%(title)s.%(ext)s"'
+
+# Playlist video (MP4)
+alias ytpv='yt-dlp --yes-playlist -f "bv*+ba/b" \
+  --merge-output-format mp4 \
+  -o "%(playlist_title)s/%(playlist_index)02d - %(title)s.%(ext)s"'
 
 # -----------------------------------------------------------------------------
 # Flatpak applications
@@ -98,4 +116,18 @@ mvr() {
         --remove-source-files \
         "$@"
 }
+
+# -----------------------------------------------------------------------------
+# yazi : make your terminal change to Yazi's last directory when you exit
+# -----------------------------------------------------------------------------
+
+function y() {
+	local tmp cwd
+	tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
+	command yazi "$@" --cwd-file="$tmp"
+	IFS= read -r -d '' cwd < "$tmp"
+	[ "$cwd" != "$PWD" ] && [ -d "$cwd" ] && builtin cd -- "$cwd"
+	rm -f -- "$tmp"
+}
+
 
