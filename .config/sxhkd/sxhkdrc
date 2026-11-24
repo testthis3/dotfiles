@@ -31,10 +31,10 @@ super + shift + p
     nsxiv $HOME/uni/resources/schedule.jpeg
 
 super + y
-    st -e yazi # y: alias for yazi (see ~/.bashrc)
+    st -e bash -ic y # y: alias for yazi (see ~/.bashrc)
 
 super + shift + y
-    st -e yazi ~/uni/S1 
+    st -e bash -ic y ~/uni/S1 
 
 
 super + shift + s

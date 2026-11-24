@@ -10,8 +10,7 @@ Plug 'ghifarit53/tokyonight-vim'    " Dark, vibrant color theme inspired by Toky
 Plug 'tpope/vim-surround'           " Shortcuts to easily add/change/delete quotes, brackets, and XML tags
 Plug 'chrisbra/Colorizer'           " Automatically highlights hex colors (e.g. #FFAA00) with their actual color
 Plug 'neoclide/coc.nvim', {'branch': 'release'} " VS Code-like intellisense engine for code autocompletion
-
-" Finalize plugin loading
+Plug 'markonm/traces.vim'           " Substitute preview"
 call plug#end()
 
 " Colorizer settings: Auto-enable on all files, keep active on buffer switch, use syntax engine

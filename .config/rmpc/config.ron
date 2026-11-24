@@ -22,7 +22,7 @@
     directories_sort: SortFormat(group_by_type: true, reverse: false),
     auto_open_downloads: true,
    
-    lyrics_dir: "~/Music/",
+    lyrics_dir: "~/data/media/Music/",
     on_song_change: Some(["sh", "-c", "sh \"$HOME/.config/rmpc/scripts/hooks/on-song-change\" &"]),
     exec_on_song_change_at_start: true,
 

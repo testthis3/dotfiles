@@ -45,6 +45,16 @@ alias db='export $(dbus-launch)'
 alias config='/usr/bin/git --git-dir=/home/marouane/.cfg/ --work-tree=/home/marouane'
 
 # -----------------------------------------------------------------------------
+# ip command
+# -----------------------------------------------------------------------------
+
+# Show all interfaces
+alias ipa='ip -br a'
+
+# Show physical interfaces only
+alias ipp='for i in /sys/class/net/*; do [ -e "$i/device" ] && ip -br a show "${i##*/}"; done'
+
+# -----------------------------------------------------------------------------
 # yt-dlp
 # -----------------------------------------------------------------------------
 
